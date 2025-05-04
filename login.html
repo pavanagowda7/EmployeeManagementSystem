@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin 0Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Employee Management System</h1>
+  </header>
+
+  <div class="login-container">
+    <h2>Admin Login</h2>
+    <form action="loginn.php" method="post">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+      
+      <div class="forgot-password">
+       
+      </div>
+
+      <input type="submit" name="submit" value="submit">
+    </form>
+  </div>
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const toggleButton = event.target;
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleButton.textContent = "Hide";
+      } else {
+        passwordInput.type = "password";
+        toggleButton.textContent = "Show";
+      }
+    }
+  </script>
+</body>
+</html>
